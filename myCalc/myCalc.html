@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Calc</title>
+</head>
+<body>
+	<script>
+	var a = +prompt('Введите число');
+	var b = prompt('Введите знак');
+	var c = +prompt('Введите второе число');
+	var d;
+		
+	switch (b){
+		case'+':
+			d = a + c;
+			alert( d );
+			break;
+			
+		case '-':
+			d = a - c;
+			alert( d );
+			break;
+		
+		case'*':
+			d = a * c;
+			alert( d );
+			break;
+        case '/':
+			d = a / c;
+			alert( d );
+            break;
+	}
+	</script>
+</body>
+</html>
