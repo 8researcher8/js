@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+var a;
+var b;
+var c;
+var d;
+        do {
+            a = prompt('Введите число','')
+        } while( !isFinite(a) );
+
+            b = prompt('Введите знак','');
+
+        do{
+            c = prompt('Введите второе число','');
+        } while( !isFinite(c) );
+
+      	switch (b){
+            
+        case '+':
+          d = +a + +c;
+          alert( d );
+          break;
+
+        case '-':
+          d = a - c;
+          alert( d );
+          break;
+
+        case '*':
+          d = a * c;
+          alert( d );
+          break;
+
+        case '/':
+          d = a / c;
+          alert( d );
+          break;
+        
+        default: 
+          alert('Введите число');
+	}
+
+    </script>
+</body>
+</html>
