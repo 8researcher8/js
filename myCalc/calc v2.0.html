@@ -12,13 +12,13 @@ var c;
 var d;
         do {
             a = prompt('Введите число','')
-        } while( !isFinite(a) );
+        } while( !isFinite(a) || a =='' );
 
-            b = prompt('Введите знак','');
+            b = prompt('Введите знак');
 
         do{
             c = prompt('Введите второе число','');
-        } while( !isFinite(c) );
+        } while( !isFinite(c) || c =='' );
 
       	switch (b){
             
