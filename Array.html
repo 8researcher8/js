@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
 </head>
+
 <body>
     <script>
         'use strict'
         // Задание № 1
-        // Из массива случайных чисел длиной 20 в диапазоне -50..50
-        
+        // Из массива случайных чисел длиной 20 в диапазоне -50..50 выбрать отрицательные нечетные числа.
+
+
         function getRandomArray(length, min, max) {
             var arr = [];
             for (var i = 0; i < length; i++) {
@@ -24,9 +27,8 @@
 
         var arr = getRandomArray(20, -50, +50);
         console.log(arr);
-      
+
         // Выбрать отрицательные нечетные числа.
-      
         function negOdd(array) {
             var negOddArray = [];
             for (var i = 0, j = 0; i < arr.length; i++) {
@@ -37,6 +39,18 @@
             return negOddArray;
         }
         console.log(negOdd(arr));
+
+
+        // выведите максимальное значение
+        function maxValue(array) {
+            var numberMax = arr[0];
+            for (var i = 1; i < arr.length; i++){
+                if (numberMax < arr[i]) 
+                  numberMax = arr[i];
+        }
+        return numberMax;
+        }
+        console.log(maxValue(arr));
     </script>
 </body>
 
