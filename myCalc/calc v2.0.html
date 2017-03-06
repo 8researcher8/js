@@ -13,9 +13,11 @@ var d;
         do {
             a = prompt('Введите число','')
         } while( !isFinite(a) || a =='' || a ==  null);
-
+		
+		do{
             b = prompt('Введите знак');
-
+		} while( b != ('+' || '-' || '*' || '/'));
+		
         do{
             c = prompt('Введите второе число','');
         } while( !isFinite(c) || c =='' || c ==  null );
@@ -43,7 +45,7 @@ var d;
           break;
         
         default: 
-          alert('Введите число');
+          alert('Введенный знак неверный');
 	}
 
     </script>

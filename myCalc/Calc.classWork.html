@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        'use strict'
+
+        var firstNumber,
+            secondNumber,
+            sign,
+            allowZero = true,
+            calc;
+
+        firstNumber = getNumber('первое', allowZero);
+
+        var isCorrectSign;
+        do {
+            sign = prompt("Введите знак:");
+            isCorrectSign = true;
+
+            switch (sign) {
+                case '+': calc = sum;
+                    break;
+
+                case '-': calc = sub;
+                    break;
+
+                case '*': calc = mult;
+                    break;
+
+                case '/': calc = div;
+                    break;
+
+                default: isCorrectSign = false;
+                    break;
+            }
+        } while (!isCorrectSign);
+
+        if (sign === '/')
+            allowZero = false;
+
+        secondNumber = getNumber('второе', allowZero);
+		alert(calc(firstNumber, secondNumber));
+		
+		
+        console.log(firstNumber);
+        console.log(secondNumber);
+        console.log(sign);
+        console.log(calc);
+
+        function getNumber(numberName) {
+            var number;
+            do {
+                number = prompt("Введите " + numberName + " число");
+            } while (!isNumeric(number));
+            return +number;
+        }
+
+        function isNumeric(number) {
+            return !isNaN(parseFloat(number)) && isFinite(number);
+        }
+
+        function sum(a, b) {
+            return a + b;
+        }
+
+        function sub(a, b) {
+            return a - b;
+        }
+
+        function mult(a, b) {
+            return a * b;
+        }
+
+        function div(a, b) {
+            return a / b;
+        }
+    </script>
+</body>
+
+</html>
