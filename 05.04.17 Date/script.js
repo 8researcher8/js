@@ -10,7 +10,7 @@ text += "\nСекунд сейчас - " + newDate.getSeconds();
 var year1 = prompt("Введите год, на проверку высокосный ли он?!", "2000");
 
 function leap(year) {
-    var newDate2 = new Date(year, 1, 29, 11, 0, 0);
+    var newDate2 = new Date(year, 1, 29);
     // console.log(newDate2);
     if (newDate2.getDate() === 29 && newDate2.getMonth() === 1) {
         return "29 Февраля существует, значит год високосный";
