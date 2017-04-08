@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 // Задание № 1
 // Из массива случайных чисел длиной 20 в диапазоне -50..50 выбрать отрицательные нечетные числа.
 
@@ -16,7 +16,7 @@ function getRandomNumber(min, max) {
 }
 
 var newArr = getRandomArray(20, -50, +50);
-console.log(newArr);
+// console.log(newArr);
 
 // Выбрать отрицательные нечетные числа.
 function negOdd(testArray) {
@@ -29,10 +29,10 @@ function negOdd(testArray) {
     return negOddArray;
 }
 
-console.log(negOdd(newArr));
+// console.log(negOdd(newArr));
 
 
-// выведите максимальное значение
+// Выведите максимальное значение
 function maxValue(arrayMax) {
     var numberMax = arrayMax[0];
     for (var i = 0; i < arrayMax.length; i++) {
@@ -42,10 +42,11 @@ function maxValue(arrayMax) {
     return numberMax;
 }
 
-console.log(maxValue(newArr));
+// console.log(maxValue(newArr));
 
-// выбираем уникальное
+// Выбираем только уникальные значения
 var unArr = [1, 2, 3, 1, 3, 4, 5];
+
 function getUniqueNumber(testArray) {
     var result = [],
         isUnique;
